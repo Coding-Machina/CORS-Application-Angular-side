@@ -1,0 +1,76 @@
+<p>
+  batch works!
+</p>
+
+
+<div>
+   <div>
+    <label>
+      Id
+    </label>
+    <input type="text" [(ngModel)] = batche.BatchId>
+  </div>
+  <div>
+    <label>
+      Name
+    </label>
+    <input type="text" [(ngModel)] = batche.BatchName>
+  </div>
+  <div>
+    <label>
+      Start Date
+    </label>
+    <input type="text" [(ngModel)] = batche.StartDate>
+  </div>
+  <div>
+    <label>
+      End Date
+    </label>
+    <input type="text" [(ngModel)] = batche.TentativeEndDate>
+  </div>
+  <div>
+    <label>
+      Number of Hours
+    </label>
+    <input type="text" [(ngModel)] = batche.NoOfHours>
+  </div>
+  <div>
+    <label>
+      Hours Taken
+    </label>
+    <input type="text" [(ngModel)] = batche.HoursTaken>
+  </div>
+  <div>
+    <label>
+      Remarks
+    </label>
+    <input type="text" [(ngModel)] = batche.Remarks>
+  </div>
+  <button (click) = saveBatchesData()>Submit</button>
+</div>
+
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Start Date</th>
+      <th>End Date</th>
+      <th>No of hours</th>
+      <th>Hours Taken</th>
+      <th>Remarks</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor= "let b of batches">
+      <td>{{b.BatchId}}</td>
+      <td>{{b.BatchName}}</td>
+      <td>{{b.StartDate}}</td>
+      <td>{{b.TentativeEndDate}}</td>
+      <td>{{b.NoOfHours}}</td>
+      <td>{{b.HoursTaken}}</td>
+      <td>{{b.Remarks}}</td>
+    </tr>
+  </tbody>
+</table>
